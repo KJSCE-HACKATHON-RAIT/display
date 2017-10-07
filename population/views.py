@@ -8,6 +8,6 @@ def home(requests):
     #ML
 
 
-    context['predicted_data'] = [2,12,8]
+    context['predicted_data'] = [2,13,8]
     return render(requests,'population.html',context)
 

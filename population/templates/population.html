@@ -1,6 +1,84 @@
 {% extends 'base.html' %}
 {% block content %}
-<div id="container" style="width:100%; height:400px;"></div>
+
+    <style>
+table {
+        width: 100%;
+    }
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}
+    </style>
+<div class="container" style="background-color: white">
+  <h2>Latest Blocks</h2>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Hash</th>
+        <th>date-time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="filterable-cell">Modi</td>
+        <td class="filterable-cell">Kejriwal</td>
+        <td class="filterable-cell">Rahul</td>
+    </tr>
+    <tr>
+        <td class="filterable-cell">Modi</td>
+        <td class="filterable-cell">Kejriwal</td>
+        <td class="filterable-cell">Rahul</td>
+    </tr>
+            <tr>
+        <td class="filterable-cell">Modi</td>
+        <td class="filterable-cell">Kejriwal</td>
+        <td class="filterable-cell">Rahul</td>
+    </tr>
+     <tr>
+        <td class="filterable-cell">Modi</td>
+        <td class="filterable-cell">Kejriwal</td>
+        <td class="filterable-cell">Rahul</td>
+    </tr>
+    <tr>
+        <td class="filterable-cell">Modi</td>
+        <td class="filterable-cell">Kejriwal</td>
+        <td class="filterable-cell">Rahul</td>
+    </tr><tr>
+        <td class="filterable-cell">Modi</td>
+        <td class="filterable-cell">Kejriwal</td>
+        <td class="filterable-cell">Rahul</td>
+    </tr>
+    </tbody></table>
+</div>
+<div id="container" class="container" ></div>
 
     <script type="text/javascript">
 $(function () {
@@ -12,7 +90,7 @@ $(function () {
             text: 'Vote prediction'
         },
         xAxis: {
-            categories: ['0', '1', '2']
+            categories: ['Rahul', 'Modi', 'Kejriwal']
         },
         yAxis: {
             title: {
